@@ -66,6 +66,7 @@
         liff.scanCode().then(data => {
           const stringifiedResult = JSON.stringify(data)
           alert(stringifiedResult)
+          liff.closeWindow()
           //   fetch('/createAccount', {
           //     method: 'POST',
           //     mode: `cors`,
