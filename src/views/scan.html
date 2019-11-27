@@ -65,22 +65,22 @@
       function scanCode() {
         liff.scanCode().then(data => {
           const stringifiedResult = JSON.stringify(data)
-          //alert(stringifiedResult)
-          fetch('/createAccount', {
-            method: 'POST',
-            mode: `cors`,
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-          })
-            .then(result => {
-              alert('Add Success')
-              location.reload()
-            })
-            .catch(error => {
-              alert('errror : ', error)
-            })
+          alert(stringifiedResult)
+          //   fetch('/createAccount', {
+          //     method: 'POST',
+          //     mode: `cors`,
+          //     headers: {
+          //       'Content-Type': 'application/json'
+          //     },
+          //     body: JSON.stringify(data)
+          //   })
+          //     .then(result => {
+          //       alert('Add Success')
+          //       location.reload()
+          //     })
+          //     .catch(error => {
+          //       alert('errror : ', error)
+          //     })
         })
       }
       liff.init(
