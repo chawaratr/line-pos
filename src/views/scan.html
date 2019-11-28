@@ -66,7 +66,17 @@
         liff.scanCode().then(data => {
           const stringifiedResult = JSON.stringify(data)
           alert(stringifiedResult)
-          liff.closeWindow()
+          event.preventDefault()
+          liff
+            .sendMessages([
+              {
+                type: 'text',
+                text: data
+              }
+            ])
+            .then(() => {
+              liff.closeWindow()
+            })
           //   fetch('/createAccount', {
           //     method: 'POST',
           //     mode: `cors`,
@@ -155,3 +165,13 @@
     </script>
   </body>
 </html>
+
+<!-- closeApp(event) {
+  event.preventDefault();
+  liff.sendMessages([{
+    type: 'text',
+    text: "Thank you, Bye!"
+  }]).then(() => {
+    liff.closeWindow();
+  });
+} -->
