@@ -19,7 +19,7 @@
     "ejs": "^2.7.1",
     "express": "^4.17.1",
     "express-http-response": "0.0.8",
-    "firebase-admin": "^8.6.1",
+    "firebase-admin": "^11.4.1",
     "mongodb": "^3.2.7",
     "mongoose": "^5.5.15",
     "@babel/core": "^7.4.5",
